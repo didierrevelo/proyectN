@@ -15,7 +15,7 @@ router.post('/add', async(req, res) => {
         description
     };
     await pool.query('INSERT INTO links set ?', [newLink]);
-    res.send('received');
+    res.redirect('/links');
 });
 
 router.get('/', async(req, res) => {
@@ -23,5 +23,10 @@ router.get('/', async(req, res) => {
     res.render('links/list', { links: links });
 });
 
+router.get('/delete/:id', async(req, res) => {
+    const { id } = req.params;
+    await pool.query('DELETE FROM links WHERE ID = ?', [id]);
+    res.redirect('/links');
+})
+
 module.exports = router;
-router;
