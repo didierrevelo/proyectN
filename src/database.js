@@ -1,4 +1,3 @@
-const { create } = require('express-handlebars');
 const mysql = require('mysql');
 const { promisify } = require('util');
 
