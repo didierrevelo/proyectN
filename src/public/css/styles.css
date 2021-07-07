@@ -1,5 +1,5 @@
 body {
-    background: #f5f6fa;
+    background: #f5f6f5;
     font-family: 'Oswald', sans-serif;
     overflow: hidden;
 }
@@ -18,7 +18,7 @@ body {
 }
 
 .masthead {
-    color: white;
+    color: black;
     min-height: 30rem;
     width: 100%;
     height: 100%;
